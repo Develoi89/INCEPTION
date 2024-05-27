@@ -15,5 +15,13 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
     mv wp-cli.phar /usr/local/bin/wp 
     
 COPY conf/www.conf /etc/php/7.4/fpm/pool.d/
+COPY ./tools/wordpress_up.sh /usr/local/bin/wordpress_up.sh
+
+RUN mkdir -p /run/php && \
+	chmod 777 /run/php /usr/local/bin/wordpress_up.sh
 
 EXPOSE 9000
+
+WORKDIR $HTML_PATH
+
+ENTRYPOINT ["/usr/local/bin/wordpress_up.sh"]
