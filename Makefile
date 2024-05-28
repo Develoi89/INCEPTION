@@ -1,5 +1,5 @@
 LOGIN		:= ealonso-
-YML_PATH	:= srcs/docker-compose.yml
+YML_PATH	:= ./srcs/docker-compose.yml
 VOLUMES_PATH	:= /home/$(LOGIN)/data
 
 export VOLUMES_PATH
@@ -7,7 +7,7 @@ export VOLUMES_PATH
 all: setup up
 
 up:
-	docker-compose --file=$(YML_PATH) up --build --detach
+	docker compose --file=$(YML_PATH) up --build --detach
 
 down:
 	docker compose --file=$(YML_PATH) down

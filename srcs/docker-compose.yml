@@ -4,7 +4,7 @@ networks:
     driver: bridge
 #Containers solicitados
 services:
-  maridadb:
+  mariadb:
     container_name: mariadb
     image: mariadb
     build:
@@ -40,7 +40,7 @@ services:
     ports:
       - 443:443
     volumes:
-      - wordpressdata:/var/ww/html
+      - wordpress_data:/var/ww/html
     env_file:
       - .env
 
