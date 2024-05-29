@@ -7,9 +7,7 @@ echo "waiting MariaDB init..."
 
 #bucle que paraliza el script hasta que se haya iniciado MariaDB
 
-while ! mysqladmin ping --silent; do
-	sleep 1
-done
+sleep 1
 
 #condicion que comprueba si la base de datos ya existe
 

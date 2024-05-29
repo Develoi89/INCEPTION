@@ -2,10 +2,8 @@
 
 #esperamos a que el container de MariaDB este up
 
-echo "Waiting MariaDB..."
-while ! mysqladmin ping -h"$DB_HOST" --silent; do
-	sleep 1
-done
+echo "Waiting Mariadb..."
+sleep 16
 echo "MariaDB is ready."
 
 if [ -f .wp-config.php ]
