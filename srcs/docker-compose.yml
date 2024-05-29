@@ -40,7 +40,7 @@ services:
     ports:
       - 443:443
     volumes:
-      - wordpress_data:/var/ww/html
+      - wordpress_data:/var/www/html
     env_file:
       - .env
 
