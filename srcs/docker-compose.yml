@@ -6,7 +6,7 @@ networks:
 services:
   mariadb:
     container_name: mariadb
-    image: mariadb
+    image: mariadb:My
     build:
       context: ./requirements/mariadb
     networks:
@@ -18,7 +18,7 @@ services:
         
   wordpress:
     container_name: wordpress
-    image: wordpress
+    image: wordpress:My
     build:
       context: ./requirements/wordpress
     networks:
@@ -32,7 +32,7 @@ services:
 
   nginx:
     container_name: nginx
-    image: nginx
+    image: nginx:My
     build:
       context: ./requirements/nginx
     networks:

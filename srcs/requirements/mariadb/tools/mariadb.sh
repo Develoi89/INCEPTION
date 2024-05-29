@@ -7,7 +7,7 @@ echo "waiting MariaDB init..."
 
 #bucle que paraliza el script hasta que se haya iniciado MariaDB
 
-sleep 1
+sleep 5
 
 #condicion que comprueba si la base de datos ya existe
 
