@@ -6,9 +6,6 @@ RUN apt-get update -y && apt-get -y install \
     	php-fpm \
     	php-mysqli \
     	mariadb-client && \
-#Descarga wp-cli.phar, un archivo PHP que contiene el cliente de linea de comandos de worpress
-#le da permisos de ejecucion y lo aloja en el Path, para que los comandos puedan ejecutarse 
-#en el terminal desde cualquier directorio del entorno.
     	curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
     	chmod +x wp-cli.phar && \
     	mv wp-cli.phar /usr/local/bin/wp 
