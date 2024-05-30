@@ -15,6 +15,9 @@ down:
 srcs/.env:
 	@echo "Missing .env file in srcs folder" && exit 1
 
+fclean: clean
+	 @docker system prune -a --volumes -f
+
 clean:
 	@echo "Cleaning volumes folders..."
 	@sudo rm -rf $(VOLUMES_PATH)
