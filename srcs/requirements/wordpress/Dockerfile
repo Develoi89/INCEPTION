@@ -10,8 +10,8 @@ RUN apt-get update -y && apt-get -y install \
     	chmod +x wp-cli.phar && \
     	mv wp-cli.phar /usr/local/bin/wp 
     
-COPY 	conf/www.conf /etc/php/7.4/fpm/pool.d/
-COPY 	./tools/wordpress_up.sh /usr/local/bin/wordpress_up.sh
+COPY conf/www.conf /etc/php/7.4/fpm/pool.d/
+COPY ./tools/wordpress_up.sh /usr/local/bin/wordpress_up.sh
 
 RUN mkdir -p /run/php && \
 	chmod 777 /run/php /usr/local/bin/wordpress_up.sh
